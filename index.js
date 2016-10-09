@@ -16,7 +16,7 @@ var Api = function(config) {
   this._auth = (config.basicAuth) ? buildBasicAuthHeader(config.basicAuth) : '';
   this._host = config.host || 'localhost';
   this._port = config.port || '12900';
-  this._uri = this._protocol + '://' + this._host + ':' + this._port;
+  this._uri = this._protocol + '://' + this._host + ':' + this._port + '/api';
 };
 
 Object.keys(methods).forEach(function(mName) {
